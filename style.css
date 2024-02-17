@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    margin-right: 10px;
+}
+
+.site-name {
+    color: white;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.header-buttons ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header-buttons li {
+    margin-left: 10px;
+}
+
+.header-buttons a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block; /* Ensure the buttons are displayed inline */
+}
+
+.header-buttons a:hover {
+    background-color: rgb(74, 20, 101);
+}
+
+main {
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+.menu-icon {
+    background: url('images/Profile.jpg');
+    background-size: contain;
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+}
+
+.welcome-section {
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+.welcome-message {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.welcome-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    opacity: 0.9;
+    transition: all 0.8s ease;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+/* Mobile Version */
+@media only screen and (max-width: 480px) {
+    header {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-buttons {
+        margin-top: 10px;
+    }
+}
