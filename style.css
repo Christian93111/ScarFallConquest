@@ -144,15 +144,22 @@ header {
     }
 
 body {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background: fixed;
+        position: relative;
+        margin: 0;
+        font-family: Arial, sans-serif;
     }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+body::before {
+    content: "";
+    display: block;
+    position: fixed; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1; /* keep it behind the content */
+    background-size: cover;
+    background-position: center;
     }
 
 .header-buttons {
