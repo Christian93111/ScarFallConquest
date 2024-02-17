@@ -1,6 +1,6 @@
 //--------------------------------------------------------------------------------- Index (Main Page) ---------------------------------------------------------------------------------
 
-const descriptionText = "Your ultimate destination for competitive gaming excitement! Immerse yourself in the adrenaline-pumping world of ScarFall 2.0 tournaments, where skilled players come together to showcase their prowess in thrilling scrim matches. At Scarfall Conquest, we take pride in organizing high-stakes Tournaments with enticing prize pools, offering participants the chance to claim victory and earn fantastic rewards. What sets us apart is our commitment to providing an inclusive gaming experience. We believe in leveling the playing field, and that's why entry to our Tournaments is entirely free. Whether you're a seasoned gamer or just starting your Esports journey, Scarfall Conquest welcomes players of all skill levels to join the action-packed battles. Join us on this gaming adventure, where every match is a chance to prove your skills, forge new connections with fellow gamers, and bask in the thrill of ScarFall 2.0 Conquests. Your journey to glory starts here – let the gaming commence!";
+const descriptionText = "Your ultimate destination for competitive gaming excitement! Immerse yourself in the adrenaline-pumping world of ScarFall 2.0 tournaments, where skilled players come together to showcase their prowess in thrilling scrim matches. At ScarFall Conquest, we take pride in organizing high-stakes Tournaments with enticing prize pools, offering participants the chance to claim victory and earn fantastic rewards. What sets us apart is our commitment to providing an inclusive gaming experience. We believe in leveling the playing field, and that's why entry to our Tournaments is entirely free. Whether you're a seasoned gamer or just starting your Esports journey, Scarfall Conquest welcomes players of all skill levels to join the action-packed battles. Join us on this gaming adventure, where every match is a chance to prove your skills, forge new connections with fellow gamers, and bask in the thrill of ScarFall 2.0 Conquests. Your journey to glory starts here – let the gaming commence!";
 
 function typeDescription() {
     const descriptionElement = document.getElementById('description');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', typeDescription);
 
 //--------------------------------------------------------------------------------- Links ---------------------------------------------------------------------------------
 
-const linkText = "Be Sure Follow To Keep Up With The Latest News And Updates.";
+const linkText = "Be sure Follow to keep up with the Latest News and Updates.";
 
 function typelink() {
     const linkElement = document.getElementById('links');
@@ -79,14 +79,14 @@ document.getElementById('discord').addEventListener('click', function () {
     if (isMobile) {
         // 3.) Try to Open the App
         try {
-            navigator.startApp.check('discord://discordapp.com/invite/kmXvp3Fwqw').then(function () {
-                window.location.href = 'discord://discordapp.com/invite/kmXvp3Fwqw'; // 4.) App is Installed, Redirect tO App Url
+            navigator.startApp.check('discord://discordapp.com/invite/r378Ey3Z4D').then(function () {
+                window.location.href = 'discord://discordapp.com/invite/r378Ey3Z4D'; // 4.) App is Installed, Redirect tO App Url
             });
         } catch (error) {
-            window.location.href = 'https://discord.gg/kmXvp3Fwqw'; // 5.) App is not Installed, Show a Link tO The App
+            window.location.href = 'https://discord.gg/r378Ey3Z4D'; // 5.) App is not Installed, Show a Link tO The App
         }
     } else {
-        window.location.href = 'https://discord.gg/kmXvp3Fwqw'; // Desktop Users
+        window.location.href = 'https://discord.gg/r378Ey3Z4D'; // Desktop Users
     }
 });
 
