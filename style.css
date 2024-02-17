@@ -143,13 +143,11 @@ header {
     align-items: center;
     }
 
-body::before {
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Cover Viewport Height */
-    z-index: -1;
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: fixed;
     }
 
 body {
