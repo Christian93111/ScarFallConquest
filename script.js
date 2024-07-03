@@ -80,10 +80,10 @@ document.getElementById('discord').addEventListener('click', function () {
         // 3.) Try to Open the App
         try {
             navigator.startApp.check('discord://discordapp.com/invite/r378Ey3Z4D').then(function () {
-                window.location.href = 'discord://discordapp.com/invite/r378Ey3Z4D'; // 4.) App is Installed, Redirect tO App Url
+                window.location.href = 'discord://discordapp.com/invite/r378Ey3Z4D'; // 4.) App is Installed, Redirect to App Url
             });
         } catch (error) {
-            window.location.href = 'https://discord.gg/r378Ey3Z4D'; // 5.) App is not Installed, Show a Link tO The App
+            window.location.href = 'https://discord.gg/r378Ey3Z4D'; // 5.) App is not Installed, Show a Link to The App
         }
     } else {
         window.location.href = 'https://discord.gg/r378Ey3Z4D'; // Desktop Users
