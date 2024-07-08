@@ -69,6 +69,29 @@ function typeabout() {
 
 document.addEventListener('DOMContentLoaded', typeabout);
 
+//--------------------------------------------------------------------------------- History ---------------------------------------------------------------------------------
+
+const historyText = "It all began on November 25, 2023, when two visionaries, FUNLIX VFX and Christian, joined forces to create a server that would change the gaming landscape forever. Later, BESTSG joined the team as a tournament manager and played a crucial role in shaping the organization's success. His dedication and hard work earned him the title of co-owner of SC! Together, they organized the first-ever esports tournament in the Scarfall 2.0 community, introducing competitive gaming to the platform. The prize pool was a modest 100 INR, but the support from the community was overwhelming! This marked the beginning of Scarfall Conquest's journey, and since then, the organization has hosted numerous tournaments, with the Jagannath Season Cup being the most popular among fans. As we move forward, we're committed to taking Scarfall Conquest to new heights, and we're excited to have you along for the ride! Stay tuned for more updates, and let's make history together!";
+
+function typehistory() {
+    const historyElement = document.getElementById('history');
+    historyElement.textContent = ''; // Clear existing text
+
+    let index = 0;
+
+    function type() {
+        if (index < historyText.length) {
+            historyElement.textContent += historyText.charAt(index);
+            index++;
+            setTimeout(type, 50); // Adjust the typing speed (milliseconds)
+        }
+    }
+
+    type();
+}
+
+document.addEventListener('DOMContentLoaded', typehistory);
+
 
 //--------------------------------------------------------------------------------- Deep Links (For Mobile And PC) ---------------------------------------------------------------------------------
 
