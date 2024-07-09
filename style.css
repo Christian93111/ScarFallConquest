@@ -13,6 +13,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -23,6 +25,10 @@ header {
 
 .menu-icon {
     margin-right: 10px;
+    background: url('images/Profile.jpg');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
 }
 
 .site-name {
@@ -32,6 +38,8 @@ header {
 .header-buttons {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    /* Allow buttons to wrap on small screens */
 }
 
 .header-buttons ul {
@@ -39,6 +47,8 @@ header {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
+    /* Allow list items to wrap on small screens */
 }
 
 .header-buttons li {
@@ -51,7 +61,6 @@ header {
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
-    /* Ensure the buttons are displayed inline */
 }
 
 .header-buttons a:hover {
@@ -62,15 +71,6 @@ main {
     padding: 40px;
     text-align: center;
     color: white;
-}
-
-.menu-icon {
-    background: url('images/Profile.jpg');
-    background-size: contain;
-    width: 40px;
-    /* Adjust the width as needed */
-    height: 40px;
-    /* Adjust the height as needed */
 }
 
 .welcome-section {
@@ -140,7 +140,6 @@ p {
 
 /* Mobile Version */
 @media only screen and (max-width: 480px) {
-
     body {
         background-repeat: no-repeat;
         background-position: center;
@@ -155,12 +154,32 @@ p {
 
     header {
         flex-direction: column;
+        padding: 10px;
+        /* Adjust padding for smaller screens */
     }
 
     .header-buttons {
         margin-top: 10px;
+        justify-content: center;
+        /* Center the buttons */
+    }
+
+    .header-buttons li {
+        margin: 5px 0;
+        /* Adjust margins for smaller screens */
+    }
+
+    .welcome-message {
+        font-size: 2em;
+        /* Adjust font size for smaller screens */
+    }
+
+    .welcome-description {
+        font-size: 1em;
+        /* Adjust font size for smaller screens */
     }
 }
+
 
 /*-------------------------- Article News --------------------*/
 
@@ -174,58 +193,9 @@ p {
     animation: slideInLeft 1.5s ease-in-out;
 }
 
-.article .article-title {
-    padding: 15px 0 20px;
-}
-
-.article .article-content {
-    padding: 15px 0 20px;
-}
-
-.article .article-title h6 {
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.article .article-title h6 a {
-    text-transform: uppercase;
-    color: #fc5356;
-    border-bottom: 1px solid #fc5356;
-}
-
 .article .article-title h2 {
-    color: #dc9c28;
+    color: #ffffff;
     font-weight: 600;
-}
-
-.article .article-title .media {
-    /*padding-top: 15px;*/
-    font-family: AGENCYR;
-    border-bottom: 1px dashed #ddd;
-    padding-bottom: 20px;
-}
-
-.article .article-title .media .avatar {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.article .article-title .media .media-body {
-    padding-left: 8px;
-}
-
-.article .article-title .media .media-body label {
-    font-weight: 600;
-    color: #fc5356;
-    margin: 0;
-}
-
-.article .article-title .media .media-body span {
-    display: block;
-    font-size: 12px;
 }
 
 .article .article-content h1,
@@ -234,51 +204,10 @@ p {
 .article .article-content h4,
 .article .article-content h5,
 .article .article-content h6 {
-    color: #dc9c28;
+    color: #ffffff;
     font-weight: 600;
     margin-bottom: 15px;
     animation: slideInLeft 1.5s ease-in-out;
-}
-
-.article .article-content blockquote {
-    max-width: 600px;
-    padding: 15px 0 30px 0;
-    margin: 0;
-}
-
-.article .article-content blockquote p {
-    font-size: 20px;
-    font-weight: 500;
-    color: #fc5356;
-    margin: 0;
-}
-
-.article .article-content blockquote .blockquote-footer {
-    color: #dc9c28;
-    font-size: 16px;
-}
-
-.article .article-content blockquote .blockquote-footer cite {
-    font-weight: 600;
-}
-
-.article .tag-cloud {
-    padding-top: 10px;
-}
-
-.article-comment {
-    box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
-    border-radius: 5px;
-    overflow: hidden;
-    background: #ffffff;
-    padding: 20px;
-}
-
-.article-comment h4 {
-    color: #dc9c28;
-    font-weight: 700;
-    margin-bottom: 25px;
-    font-size: 22px;
 }
 
 img {
