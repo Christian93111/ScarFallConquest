@@ -1,12 +1,10 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('images/Cover 1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    scroll-behavior: smooth;
 }
 
 header {
@@ -41,6 +39,7 @@ header {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    /* Allow buttons to wrap on small screens */
 }
 
 .header-buttons ul {
@@ -49,6 +48,7 @@ header {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    /* Allow list items to wrap on small screens */
 }
 
 .header-buttons li {
@@ -70,6 +70,7 @@ header {
 main {
     padding: 40px;
     text-align: center;
+    color: white;
 }
 
 .welcome-section {
@@ -143,6 +144,9 @@ p {
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
         background-size: cover;
         height: 100%;
         width: 100%;
@@ -151,29 +155,37 @@ p {
     header {
         flex-direction: column;
         padding: 10px;
+        /* Adjust padding for smaller screens */
     }
 
     .header-buttons {
         margin-top: 10px;
         justify-content: center;
+        /* Center the buttons */
     }
 
     .header-buttons li {
         margin: 5px 0;
+        /* Adjust margins for smaller screens */
     }
 
     .welcome-message {
         font-size: 2em;
+        /* Adjust font size for smaller screens */
     }
 
     .welcome-description {
         font-size: 1em;
+        /* Adjust font size for smaller screens */
     }
 }
 
-/* Article News */
+
+/*-------------------------- Article News --------------------*/
+
 .article {
     box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+    /*border-radius: 5px;*/
     overflow: hidden;
     background: #000000;
     padding: 15px;
@@ -200,6 +212,9 @@ p {
 
 img {
     max-width: 100%;
+}
+
+img {
     height: auto;
     display: block;
     margin-left: auto;
