@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
     overflow-x: hidden;
     color: white;
     position: relative;
@@ -19,68 +18,15 @@ body {
     z-index: -1;
 }
 
-header {
-    background-color: black;
-    padding: 10px 2px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
+.navbar-brand {
+    color: white !important;
 }
 
-.logo {
-    display: flex;
-    padding-left: 10px;
-    align-items: center;
+.navbar-logo {
+    height: 50px; /* Adjust this value as needed */
+    width: auto; /* Maintains aspect ratio */
 }
 
-.menu-icon {
-    margin-right: 10px;
-    background: url('images/Profile.jpg');
-    background-size: contain;
-    width: 40px;
-    height: 40px;
-}
-
-.site-name {
-    color: white;
-}
-
-.header-buttons {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.header-buttons ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.header-buttons li {
-    margin-left: 10px;
-}
-
-.header-buttons a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.header-buttons a:hover {
-    background-color: rgb(109, 109, 109);
-}
-
-main {
-    padding: 40px;
-    text-align: center;
-}
 
 .welcome-section {
     animation: slideInLeft 1.5s ease-in-out;
@@ -97,45 +43,12 @@ main {
     margin-top: 20px;
 }
 
-.button-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-button {
-    border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    opacity: 0.9;
-    transition: all 0.8s ease;
-}
-
-button:hover {
-    background-color: rgb(255, 255, 255);
-}
-
 @keyframes slideInLeft {
     0% {
         transform: translateX(-100%);
     }
-
     100% {
         transform: translateX(0);
-    }
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
     }
 }
 
@@ -149,25 +62,6 @@ p {
 
 /* Mobile Version */
 @media only screen and (max-width: 480px) {
-    body {
-        height: 100%;
-        width: 100%;
-    }
-
-    header {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .header-buttons {
-        margin-top: 10px;
-        justify-content: center;
-    }
-
-    .header-buttons li {
-        margin: 5px 0;
-    }
-
     .welcome-message {
         font-size: 2em;
     }
