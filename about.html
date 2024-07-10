@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -25,35 +26,39 @@
     <meta name="twitter:description" content="Unleash Your Skills, Conquer the Arena! Where Legends Rise and Victory Awaits!">
     <meta name="twitter:image" content="/images/Profile.jpg">
     <link rel="icon" href="images/Profile.jpg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <style>
-    body {
-        background-image: url('images/Cover 4.png');
-    }
-    </style>
-    <header>
-        <div class="logo">
-            <span class="menu-icon"></span>
-            <span class="site-name">ScarFall Conquest</span>
-        </div>
-        <nav class="header-buttons">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="links.html">Links</a></li>
-                <li><a href="history.html">History</a></li>
+    <div class="background"></div>
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/Profile.jpg" alt="ScarFall Conquest" class="navbar-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto justify-content-center text-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                <li class="nav-item"><a class="nav-link" href="links.html">Links</a></li>
+                <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
         </div>
+    </header>
+    <main class="container text-center my-5">
         <section class="welcome-section">
             <h1 class="welcome-message">ABOUT US</h1>
             <p class="welcome-description" id="about"></p>
         </section>
     </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

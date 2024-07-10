@@ -23,10 +23,14 @@ body {
 }
 
 .navbar-logo {
-    height: 50px; /* Adjust this value as needed */
+    height: 90px; /* Adjust this value as needed */
     width: auto; /* Maintains aspect ratio */
 }
 
+.btn-group {
+    gap: 10px;
+    flex-wrap: wrap;
+}
 
 .welcome-section {
     animation: slideInLeft 1.5s ease-in-out;
@@ -81,6 +85,13 @@ p {
     animation: slideInLeft 1.5s ease-in-out;
 }
 
+.article .article-title .media {
+    /* padding-top: 15px; */
+    font-family: AGENCYR;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 20px;
+}
+
 .article .article-title h2 {
     color: #ffffff;
     font-weight: 600;
@@ -99,6 +110,8 @@ p {
 }
 
 img {
+    padding-bottom: 20px;
+    padding-top: 20px;
     max-width: 100%;
     height: auto;
     display: block;
