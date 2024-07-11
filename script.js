@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', typelink());
 
 //--------------------------------------------------------------------------------- About ---------------------------------------------------------------------------------
 
-const aboutText = "ScarFall Conquest is a platform for competitive gaming enthusiasts who want to challenge themselves and others in the exciting world of ScarFall 2.0. We are a team of passionate gamers who love to create and host tournaments that are fun, fair, and rewarding for all participants. Our mission is to provide an inclusive and accessible gaming experience for everyone who loves ScarFall 2.0. We believe that anyone can be a champion, regardless of their skill level, background, or budget. That's why we offer free entry to all our tournaments, as well as attractive prize pools that can motivate and inspire players to achieve their goals. At ScarFall Conquest, we value community, integrity, and excellence. We strive to create a friendly and supportive environment where gamers can connect, learn, and grow together. We also uphold the highest standards of professionalism and ethics in organizing and conducting our tournaments. We respect the rules, the players, and the game. If you share our vision and passion for ScarFall 2.0, we invite you to join us on this gaming adventure. Whether you want to compete, spectate, or collaborate, you are welcome at ScarFall Conquest. Your journey to glory starts here. let the gaming commence!";
+const aboutText = "ScarFall Conquest is a platform for competitive gaming enthusiasts who want to challenge themselves and others in the exciting world of ScarFall 2.0. We are a team of passionate gamers who love to create and host tournaments that are fun, fair, and rewarding for all participants. Our mission is to provide an inclusive and accessible gaming experience for everyone who loves ScarFall 2.0. We believe that anyone can be a champion, regardless of their skill level, background, or budget. That's why we offer free entry to all our tournaments, as well as attractive prize pools that can motivate and inspire players to achieve their goals. At ScarFall Conquest, we value community, integrity, and excellence. We strive to create a friendly and supportive environment where gamers can connect, learn, and grow together. We also uphold the highest standards of professionalism and ethics in organizing and conducting our tournaments. We respect the rules, the players, and the game. If you share our vision and passion for ScarFall 2.0, we invite you to join us on this gaming adventure. Whether you want to compete, spectate, or collaborate, you are welcome at ScarFall Conquest. Your journey to glory starts here let the gaming commence!";
 
 function typeabout() {
     const aboutElement = document.getElementById('about');
@@ -103,6 +103,9 @@ document.addEventListener('DOMContentLoaded', typehistory());
 
 
 //--------------------------------------------------------------------------------- Deep Links (For Mobile And PC) ---------------------------------------------------------------------------------
+
+// Check for Mobile Device
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 // Function to handle deep link checking and redirection
 function handleAppLink(appScheme, appDeepLink, webUrl) {
