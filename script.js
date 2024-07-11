@@ -104,22 +104,22 @@ document.addEventListener('DOMContentLoaded', typehistory());
 
 //--------------------------------------------------------------------------------- Deep Links (For Mobile And PC) ---------------------------------------------------------------------------------
 
-// Check for Mobile Device
-var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+// Function to detect if the device is mobile
+function isMobileDevice() {
+    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+}
 
 // Function to handle deep link checking and redirection
 function handleAppLink(appScheme, appDeepLink, webUrl) {
-    if (isMobile) {
-        try {
-            navigator.startApp.check(appScheme).then(function () {
-                window.location.href = appDeepLink;
-            }).catch(function () {
-                window.location.href = webUrl;
-            });
-        } catch (error) {
+    if (isMobileDevice()) {
+        // Attempt to open the app via deep link
+        window.location.href = appDeepLink;
+        // If the app is not installed, redirect to the web URL after a delay
+        setTimeout(function() {
             window.location.href = webUrl;
-        }
+        }, 2000); // Adjust the delay as needed
     } else {
+        // Non-mobile device, redirect to the web URL
         window.location.href = webUrl;
     }
 }
@@ -130,7 +130,7 @@ document.getElementById('discord').addEventListener('click', function () {
 });
 
 document.getElementById('youtube').addEventListener('click', function () {
-    handleAppLink('vnd.youtube://', 'vnd.youtube://user/UCOh7Qq9mmn6m1U17D9JxLpw', 'https://m.youtube.com/@SCARFALL_CONQUEST');
+    handleAppLink('vnd.youtube://', 'vnd.youtube://www.youtube.com/channel/UCOh7Qq9mmn6m1U17D9JxLpw', 'https://youtube.com/@SCARFALL_CONQUEST');
 });
 
 document.getElementById('instagram').addEventListener('click', function () {
@@ -138,5 +138,5 @@ document.getElementById('instagram').addEventListener('click', function () {
 });
 
 document.getElementById('whatsapp').addEventListener('click', function () {
-    handleAppLink('whatsapp://', 'whatsapp://chat?code=0029VaFeaAF4SpkO5Ggu050k', 'https://whatsapp.com/channel/0029VaFeaAF4SpkO5Ggu050k');
+    handleAppLink('whatsapp://', 'whatsapp://chat?code=0029VaFeaAF4SpkO5Ggu050k', 'https://chat.whatsapp.com/0029VaFeaAF4SpkO5Ggu050k');
 });
