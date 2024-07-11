@@ -104,39 +104,64 @@ document.addEventListener('DOMContentLoaded', typehistory());
 
 //--------------------------------------------------------------------------------- Deep Links (For Mobile And PC) ---------------------------------------------------------------------------------
 
-// Function to detect if the device is mobile
-function isMobileDevice() {
-    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-}
+// 1.) Check For Mobile Device
+var isMobile = navigator.userAgent.toLowerCase().match(/mobile/i);
 
-// Function to handle deep link checking and redirection
-function handleAppLink(appScheme, appDeepLink, webUrl) {
-    if (isMobileDevice()) {
-        // Attempt to open the app via deep link
-        window.location.href = appDeepLink;
-        // If the app is not installed, redirect to the web URL after a delay
-        setTimeout(function() {
-            window.location.href = webUrl;
-        }, 2000); // Adjust the delay as needed
-    } else {
-        // Non-mobile device, redirect to the web URL
-        window.location.href = webUrl;
-    }
-}
-
-// Event listeners for each button
+// 2.) Use Different Url Scheme for App if Mobile
 document.getElementById('discord').addEventListener('click', function () {
-    handleAppLink('discord://', 'discord://discordapp.com/invite/r378Ey3Z4D', 'https://discord.gg/r378Ey3Z4D');
+    if (isMobile) {
+        // 3.) Try to Open the App
+        try {
+            navigator.startApp.check('discord://discordapp.com/invite/r378Ey3Z4D').then(function () {
+                window.location.href = 'discord://discordapp.com/invite/r378Ey3Z4D'; // 4.) App is Installed, Redirect to App Url
+            });
+        } catch (error) {
+            window.location.href = 'https://discord.gg/r378Ey3Z4D'; // 5.) App is not Installed, Show a Link to The App
+        }
+    } else {
+        window.location.href = 'https://discord.gg/r378Ey3Z4D'; // Desktop Users
+    }
 });
 
+// 6.) Repeat the same Logic for other Apps
 document.getElementById('youtube').addEventListener('click', function () {
-    handleAppLink('vnd.youtube://', 'vnd.youtube://www.youtube.com/channel/UCOh7Qq9mmn6m1U17D9JxLpw', 'https://youtube.com/@SCARFALL_CONQUEST');
+    if (isMobile) {
+        try {
+            navigator.startApp.check('vnd.youtube://www.youtube.com/channel/UCOh7Qq9mmn6m1U17D9JxLpw').then(function () {
+                window.location.href = 'vnd.youtube://www.youtube.com/channel/UCOh7Qq9mmn6m1U17D9JxLpw';
+            });
+        } catch (error) {
+            window.location.href = 'https://youtube.com/@SCARFALL_CONQUEST';
+        }
+    } else {
+        window.location.href = 'https://www.youtube.com/@SCARFALL_CONQUEST';
+    }
 });
 
 document.getElementById('instagram').addEventListener('click', function () {
-    handleAppLink('instagram://', 'instagram://user?username=scarfall_conquest', 'https://www.instagram.com/scarfall_conquest');
+    if (isMobile) {
+        try {
+            navigator.startApp.check('instagram://user?username=scarfall_conquest').then(function () {
+                window.location.href = 'instagram://user?username=scarfall_conquest';
+            });
+        } catch (error) {
+            window.location.href = 'https://www.instagram.com/scarfall_conquest';
+        }
+    } else {
+        window.location.href = 'https://www.instagram.com/scarfall_conquest';
+    }
 });
 
 document.getElementById('whatsapp').addEventListener('click', function () {
-    handleAppLink('whatsapp://', 'whatsapp://chat?code=0029VaFeaAF4SpkO5Ggu050k', 'https://chat.whatsapp.com/0029VaFeaAF4SpkO5Ggu050k');
+    if (isMobile) {
+        try {
+            navigator.startApp.check('whatsapp://chat?code=0029VaFeaAF4SpkO5Ggu050k').then(function () {
+                window.location.href = 'whatsapp://chat?code=0029VaFeaAF4SpkO5Ggu050k';
+            });
+        } catch (error) {
+            window.location.href = 'https://whatsapp.com/channel/0029VaFeaAF4SpkO5Ggu050k';
+        }
+    } else {
+        window.location.href = 'https://whatsapp.com/channel/0029VaFeaAF4SpkO5Ggu050k';
+    }
 });
