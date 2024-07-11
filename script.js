@@ -127,8 +127,8 @@ document.getElementById('discord').addEventListener('click', function () {
 document.getElementById('youtube').addEventListener('click', function () {
     if (isMobile) {
         try {
-            navigator.startApp.check('vnd.youtube://www.youtube.com/channel/UCOh7Qq9mmn6m1U17D9JxLpw').then(function () {
-                window.location.href = 'vnd.youtube://www.youtube.com/channel/UCOh7Qq9mmn6m1U17D9JxLpw';
+            navigator.startApp.check('vnd.youtube://UCOh7Qq9mmn6m1U17D9JxLpw').then(function () {
+                window.location.href = 'vnd.youtube://COh7Qq9mmn6m1U17D9JxLpw';
             });
         } catch (error) {
             window.location.href = 'https://youtube.com/@SCARFALL_CONQUEST';
