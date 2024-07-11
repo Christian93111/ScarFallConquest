@@ -4,6 +4,8 @@ const descriptionText = "Your ultimate destination for competitive gaming excite
 
 function typeDescription() {
     const descriptionElement = document.getElementById('description');
+    if (!descriptionElement) return; // Check if element exists
+
     descriptionElement.textContent = ''; // Clear existing text
 
     let index = 0;
@@ -28,9 +30,11 @@ const linkText = "Be sure Follow to keep up with the Latest News and Updates.";
 
 function typelink() {
     const linkElement = document.getElementById('links');
+    if (!linkElement) return; // Check if element exists
+
     linkElement.textContent = ''; // Clear existing text
 
-    let index = 0; 
+    let index = 0;
 
     function type() {
         if (index < linkText.length) {
@@ -43,7 +47,7 @@ function typelink() {
     type();
 }
 
-document.addEventListener('DOMContentLoaded', typelink);
+document.addEventListener('DOMContentLoaded', typelink());
 
 
 //--------------------------------------------------------------------------------- About ---------------------------------------------------------------------------------
@@ -52,9 +56,11 @@ const aboutText = "ScarFall Conquest is a platform for competitive gaming enthus
 
 function typeabout() {
     const aboutElement = document.getElementById('about');
+    if (!aboutElement) return; // Check if element exists
+
     aboutElement.textContent = ''; // Clear existing text
 
-    let index = 0; 
+    let index = 0;
 
     function type() {
         if (index < aboutText.length) {
@@ -67,7 +73,8 @@ function typeabout() {
     type();
 }
 
-document.addEventListener('DOMContentLoaded', typeabout);
+document.addEventListener('DOMContentLoaded', typeabout());
+
 
 //--------------------------------------------------------------------------------- History ---------------------------------------------------------------------------------
 
@@ -75,6 +82,8 @@ const historyText = "It all began on November 25, 2023, when two visionaries, FU
 
 function typehistory() {
     const historyElement = document.getElementById('history');
+    if (!historyElement) return; // Check if element exists
+
     historyElement.textContent = ''; // Clear existing text
 
     let index = 0;
@@ -90,13 +99,14 @@ function typehistory() {
     type();
 }
 
-document.addEventListener('DOMContentLoaded', typehistory);
+document.addEventListener('DOMContentLoaded', typehistory());
 
 
 //--------------------------------------------------------------------------------- Deep Links (For Mobile And PC) ---------------------------------------------------------------------------------
 
 // 1.) Check For Mobile Device
 var isMobile = navigator.userAgent.toLowerCase().match(/mobile/i);
+
 // 2.) Use Different Url Scheme for App if Mobile
 document.getElementById('discord').addEventListener('click', function () {
     if (isMobile) {
