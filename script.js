@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', typehistory());
 
 //--------------------------------------------------------------------------------- Deep Links (For Mobile And PC) ---------------------------------------------------------------------------------
 
+// Function to handle deep link checking and redirection
 function handleAppLink(appScheme, appDeepLink, webUrl) {
     if (isMobile) {
         try {
@@ -120,6 +121,7 @@ function handleAppLink(appScheme, appDeepLink, webUrl) {
     }
 }
 
+// Event listeners for each button
 document.getElementById('discord').addEventListener('click', function () {
     handleAppLink('discord://', 'discord://discordapp.com/invite/r378Ey3Z4D', 'https://discord.gg/r378Ey3Z4D');
 });
