@@ -127,8 +127,8 @@ document.getElementById('discord').addEventListener('click', function () {
 document.getElementById('youtube').addEventListener('click', function () {
     if (isMobile) {
         try {
-            navigator.startApp.check('vnd.youtube://@SCARFALL_CONQUEST').then(function () {
-                window.location.href = 'vnd.youtube://@SCARFALL_CONQUEST';
+            navigator.startApp.check('vnd.youtube://SCARFALL_CONQUEST').then(function () {
+                window.location.href = 'vnd.youtube://SCARFALL_CONQUEST';
             });
         } catch (error) {
             window.location.href = 'https://youtube.com/@SCARFALL_CONQUEST';
