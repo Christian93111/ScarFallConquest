@@ -155,3 +155,19 @@ document.getElementById('whatsapp').addEventListener('click', function () {
         window.location.href = 'https://whatsapp.com/channel/0029VaFeaAF4SpkO5Ggu050k';
     }
 });
+
+//--------------------------------------------------------------------------------- Smooth Scrolling ---------------------------------------------------------------------------------
+
+$(document).ready(function(){
+    $("a").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+                window.location.hash = hash;
+            });
+        }
+    });
+});
