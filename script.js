@@ -125,18 +125,36 @@ document.getElementById('discord').addEventListener('click', function () {
 
 // 6.) Repeat the same Logic for other Apps
 document.getElementById('youtube').addEventListener('click', function () {
-    if (isMobile) {
+    var youtubeAppLink = 'vnd.youtube://user/UCOh7Qq9mmn6m1U17D9JxLpw';
+    var webFallbackLink = 'https://youtube.com/@SCARFALL_CONQUEST';
+    
+    if (isMobile()) {
         try {
-            navigator.startApp.check('vnd.youtube://user/UCOh7Qq9mmn6m1U17D9JxLpw').then(function () {
-                window.location.href = 'vnd.youtube://user/COh7Qq9mmn6m1U17D9JxLpw';
+            navigator.startApp.start({
+                "packageName": "com.google.android.youtube",
+                "uri": youtubeAppLink
+            }).then(function () {
+                console.log('YouTube app started');
+            }).catch(function (error) {
+                console.error('Failed to start YouTube app:', error);
+                window.location.href = webFallbackLink;
             });
         } catch (error) {
-            window.location.href = 'https://youtube.com/@SCARFALL_CONQUEST';
+            console.error('Error invoking YouTube app:', error);
+            window.location.href = webFallbackLink;
         }
     } else {
-        window.location.href = 'https://www.youtube.com/@SCARFALL_CONQUEST';
+        window.location.href = webFallbackLink;
     }
 });
+
+function isMobile() {
+    // Adjust this function to correctly identify if the user is on a mobile device
+    // You can use various methods such as checking user agent or screen width
+    // For simplicity, let's assume isMobile() returns true for mobile devices
+    return true; // Replace with actual detection logic
+}
+
 
 document.getElementById('instagram').addEventListener('click', function () {
     if (isMobile) {
