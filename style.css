@@ -11,7 +11,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     z-index: -1;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .bg-dark {
